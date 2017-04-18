@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师管理</title>
+    <link rel="stylesheet" href="css/public.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/o_teacher.js"></script>
+    <script  src="js/vuePage.js"></script>
+</head>
+<body>
+<div id="webbar" v-cloak>
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th>用户名</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>证件号码</th>
+                <th>联系电话</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item in dataList" v-cloak="">
+                <td>{{item.username}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.sex}}</td>
+                <td>{{item.idNumber}}</td>
+                <td>{{item.telephone}}</td>
+                <td>{{item.memo}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page clearfix">
+            <!--<div>当前第{{cur}}页，每页显示{{page_size}}条</div>-->
+            <vue-nav :total_count="total_count" :cur="cur" :all="all" :page_size="page_size" v-on:btnclick="listens" ></vue-nav>
+        </div>
+</div>
+
+</body>
+</html>
