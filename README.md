@@ -1,6 +1,8 @@
 # vue-paging
 <h6>带跳转页码及每页多少条的vue分页</h6>
 
+### 样式如下
+<a href="https://wendychaung.github.io/vue-paging/" target="_blank"></a>
 
 ### 使用方法
 *  引入 vue.js
